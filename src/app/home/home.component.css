@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+}
+
+.search input {
+  background: white;
+  border: 1px solid #ced4da;
+  padding: 0.5rem 0.5rem;
+  color:#495057
+}
+
+.drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.drinkItem {
+  background-color: #eaf6e5;
+  width: 23%;
+  height: 340px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.drinkItem img {
+  width: 100%;
+  max-height: 80%;
+  display: inline-block;
+}
+
+@media only screen and (max-width:399px) {
+  .drinks {
+    flex-direction: column;
+  }
+
+  .drinkItem {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:400px) {
+  .drinkItem {
+    height:auto;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="search">
+  <label for="drinkName" style="margin:1px 7px;">Search</label>
+  <input type="text" id="drinkName" [(ngModel)]="drinkName" (keyup)="updateDrinks()">
+</div>
+
+<div class="drinks">
+
+  <ng-container *ngIf="drinks.length;else noDrinks">
+    <div *ngFor="let drink of drinks" class="drinkItem">
+      <img [src]="drink['strDrinkThumb']" alt="">
+      <strong>{{drink['strDrink']}}</strong><br>
+      {{drink['strCategory']}}
+    </div>
+  </ng-container>
+
+  <ng-template #noDrinks>
+    <h5>No results found</h5>
+  </ng-template>
+
+</div>
